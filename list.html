@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>文章列表</title>
+		
+		<link href="css/list.css" type="text/css" rel="stylesheet" />
+		
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/move.js" ></script>
+		<script type="text/javascript" src="js/listData.js" ></script>
+		<script type="text/javascript" src="js/header.js" ></script>
+		<script src="js/list.js"></script>
+	</head>
+	
+	<body>
+			<div class="backTopWrap">
+				
+					
+			</div>
+			<!--正文-->
+			<div class="wrap">
+				<!--顶部导航-->
+				<div class="header"></div>
+				<!--顶部导航-->
+				
+				<!--内容-->
+				<div class="content_wrap">
+					<h1 class="title">英雄动态</h1>
+					<h2>Hero Trends</h2>
+					<img class="img" src="img/three_points01.png" />
+					<div class="title_list" style="width: 1100px;">
+						列表
+						<span class="list_pen"></span>
+					</div>
+					<!--列表-->
+				    <div class="content_wrap">
+				
+				        <div class="list_content" id="articleList">
+				                  <!--列表页的数据会加载在这里-->
+				        </div>
+				        
+				        <img style="margin:30px auto 0" src="images/list_gomore_bg.jpg" />
+				        <div class="list_more" id="listMore"></div>
+				        
+				    </div>
+				    <!--模板-->
+				    <div id="itemHtml" style="display:none;">
+				    	<div class="content_one" articleid="$articleId$">
+				            <div class="img_wrap"><img src="$articleCover$" style="width: 260px;height: 168px;"></div>
+				            <div class="content_text">
+				               	<div class="title_small">$articleTitle$</div>
+				                <div class="date">$updateTime$</div>
+				                <p>$describe$</p>
+				            </div>
+				            <img class="list_img_over_xiaojiantou" src="images/list_img_over_xiaojiantou.png">
+				        </div>
+				    </div>
+	    		</div>
+				<!--内容-->
+				
+				<div class="footer_img"></div>
+				
+				<!--正文底部-->
+				<div class="borderWrap"></div>
+				<!--正文底部-->
+			</div>
+			<!--正文-->
+	</body>
+</html>
+
+<script>
+   $(function(){
+	   	$(".navBox").hover(function(){
+			$(this).find("img").show();
+			$(this).find("ul").stop().slideDown(600,"elasticOut");
+		},function(){
+			$(this).find("img").hide();
+			$(this).find("ul").stop().slideUp(100);
+		})
+   })
+</script>

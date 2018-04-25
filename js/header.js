@@ -1,0 +1,32 @@
+$(function(){
+	$(".navBox").hover(function(){
+		$(this).find("img").show();
+		$(this).find("ul").stop().slideDown(600,"elasticOut");
+	},function(){
+		$(this).find("img").hide();
+		$(this).find("ul").stop().slideUp(100);
+	})
+	$(".navBox li").hover(function(){
+		$(this).stop().animate({
+			"padding-left":"20px",
+			"width":"150px"
+		},300)
+		$(this).find("i").show();
+	},function(){
+		$(this).css("background","");
+		$(this).stop().animate({
+			"padding-left":"10px",
+			"width":"160px"
+		},300)
+		$(this).find("i").hide();
+	})
+	
+	$('.callme').click(function(){
+		$('#callmeWrap').show();
+		$('#callmeBox').show();
+	})
+	$('#close').click(function(){
+		$('#callmeWrap').hide();
+		$('#callmeBox').hide();
+	})
+})
